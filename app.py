@@ -9,4 +9,4 @@ def hello_world():
 
 @app.route('/secret')
 def secret_route():
-    return 'glad that you find this place:-)'
+    return 'secret page'
