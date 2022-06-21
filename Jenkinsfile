@@ -5,7 +5,7 @@ node {
     }
 
     stage('Build image') {
-       app = docker.build('jcsydevops/test')
+       app = docker.build('democlouddevops/test')
     }
 
     stage('Test image') {
