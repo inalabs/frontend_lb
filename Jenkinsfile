@@ -5,7 +5,7 @@ node {
     }
 
     stage('Build image') {
-       app = docker.build('democlouddevops/test')
+       app = docker.build('democlouddevops/mega-news-web')
     }
 
     stage('Test image') {
