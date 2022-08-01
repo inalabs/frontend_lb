@@ -5,7 +5,7 @@ node {
     }
 
     stage('Build image') {
-       app = docker.build('democlouddevops/mega-news-web')
+       app = docker.build('democlouddevops/sfga-web')
     }
 
     stage('Test image') {
@@ -22,6 +22,6 @@ node {
 
     stage('Trigger ManifestUpdate') {
       echo 'triggering updatemanifestjob'
-      build job: 'meganewsgitops', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
+      build job: 'sfgagitops', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
     }
 }
