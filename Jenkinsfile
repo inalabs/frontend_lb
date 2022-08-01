@@ -20,7 +20,7 @@ node {
       }
     }
 
-    stage('Trigger ManifestUpdate') {
+    stage('Trigger ManifestUpdate Jenkins Job') {
       echo 'triggering updatemanifestjob'
       build job: 'sfgagitops', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
     }
